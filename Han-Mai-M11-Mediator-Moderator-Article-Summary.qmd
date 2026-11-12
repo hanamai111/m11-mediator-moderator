@@ -1,0 +1,280 @@
+---
+title: "Moderator and Mediator Variables"
+subtitle: "Study Note on Baron & Kenny (1986)"
+author: "Han Mai"
+date: 2026-11-12
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    embed-resources: true
+    theme: cosmo
+    code-overflow: wrap
+editor: visual
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+# Introduction
+
+Baron and Kenny (1986) distinguish two roles of a third variable: specifying the conditions under which an effect occurs and explaining the process through which it occurs. Confusing these roles changes the theory, research design, and statistical test. The paper develops separate procedures and then combines moderation and mediation in a broader causal system (pp. 1173–1174, 1179–1181).
+
+This note follows the assigned 1986 article. All page references refer to that source. Marketing examples are my own illustrations, not article examples or findings from the CEP. No contemporary mediation method is substituted for the original framework.
+
+## Reading map
+
+The actual article progresses through the nature of moderators and four testing cases; the nature of mediators and regression testing; conceptual, strategic, and operational distinctions; a combined framework; and applications to control, behavioral intention, attitudes, and traits. Its contribution extends beyond the familiar mediation checklist.
+
+# Moderator Variables
+
+## Definition and conceptual logic
+
+A moderator is a qualitative or quantitative variable that changes the direction or strength of a predictor–outcome relationship. It specifies the conditions under which the predictor operates. Moderator and predictor are antecedents at the same level in the model; the moderator is not an intermediate consequence of the predictor (p. 1174).
+
+Moderation may strengthen, weaken, eliminate, or reverse a relationship. A crossover is not required. The authors note that changing from a strong to a weak or absent relationship can be especially informative conceptually. Moderators are often investigated when a predictor–criterion relationship is unexpectedly weak or inconsistent across settings or subpopulations (pp. 1174, 1178).
+
+## Statistical model and interpretation
+
+For linear moderation, the regression discussed in the article can be expressed as:
+
+$$
+Y = b_0 + b_1X + b_2Z + b_3XZ + e.
+$$
+
+Here $Y$ is the outcome, $X$ the predictor, $Z$ the moderator, and $XZ$ their product. The $b$ terms are unstandardized coefficients; $b_0$ is the intercept and $e$ residual variation. The hypothesis concerns $b_3$, tested with $X$ and $Z$ included. Significant main effects alone do not establish moderation (pp. 1174–1176).
+
+Algebraically, the slope of $X$ is $b_1+b_3Z$: the predictor effect changes across moderator values. This slope expression explains the model rather than introducing another statistical procedure. Figure 1 labels predictor, moderator, and product paths $a$, $b$, and $c$; the interaction path $c$ tests moderation. These figure-specific letters should not be confused with the mediation paths below.
+
+The product term is statistically symmetric, but theory identifies the focal predictor and the condition modifying its operation. The authors describe an uncorrelated moderator as desirable for interpretation, rather than defining moderation by zero correlations (p. 1174).
+
+## Four analysis cases
+
+The paper simplifies categorical variables to dichotomies (pp. 1174–1176).
+
+| Case | Predictor | Moderator | Analysis strategy |
+|---|---|---|---|
+| 1 | Dichotomous | Dichotomous | 2 × 2 ANOVA; test the interaction. Simple effects clarify the pattern when causally appropriate. |
+| 2 | Continuous | Dichotomous | Test differences between unstandardized regression slopes across groups before testing individual slopes. |
+| 3 | Dichotomous | Continuous | Specify the form of effect change. For a linear change, include $X$, $Z$, and $XZ$. |
+| 4 | Continuous | Continuous | Use the product-variable regression for linear moderation; use corresponding higher-order terms for a hypothesized nonlinear form. |
+
+Case 2 warns against comparing correlations alone. Correlations vary with predictor variance and measurement error; a smaller correlation need not indicate a smaller effect. The authors recommend unstandardized slopes rather than standardized beta weights. Differential predictor reliability across groups also biases comparisons (p. 1175).
+
+Figure 2 shows linear, quadratic, and step forms. In a hypothetical message example, rational versus fear-arousing communication may work differently across intelligence levels. Theory must specify how the effect changes. A theoretically specified step permits a split at its threshold, but the authors emphasize the difficulty of locating that threshold; they do not recommend indiscriminate dichotomization (pp. 1175–1176).
+
+For quadratic moderation, the paper discusses the squared and product terms needed to test $XZ^2$. Predicted-value graphs or tables aid interpretation. Measurement error in variables entering the product can substantially reduce power (p. 1176).
+
+## Article examples
+
+- **Life events and illness:** uncontrollable life events show a stronger positive relation with illness severity than controllable events; controllability specifies a condition (p. 1174).
+- **Noise and performance:** the effect of noise intensity depends on controllability. Intensity × controllability is the moderator test (p. 1174).
+- **Incentives and attitude change:** the relation differs under public commitment versus private counterattitudinal action, illustrating a possible crossover (p. 1174).
+
+# Mediator Variables
+
+## Definition and causal-process logic
+
+A mediator accounts for the predictor–criterion relationship by representing an intervening process: the predictor affects the mediator, which affects the outcome. Moderators concern conditions of an effect; mediators concern how or why the effect occurs. The mediator is an outcome of the independent variable and an antecedent of the dependent variable (p. 1176).
+
+The article links this logic to stimulus–organism–response models but does not restrict mediators to internal individual psychological processes. Group-level constructs, such as cohesiveness, can also mediate relationships. A mediator is therefore more than an additional correlated predictor (pp. 1176, 1178).
+
+## Paths and notation
+
+Figure 3 uses $a$ for independent variable → mediator, $b$ for mediator → outcome, and $c$ for the direct independent variable → outcome path with the mediator included.
+
+**Notation caution:** Figure 3 does not label its controlled direct path $c'$. This note preserves its $c$ and uses $t$ for the predictor-only coefficient. The symbol $t$ is my explanatory label, not the article figure label or a test statistic (pp. 1176–1177).
+
+## Three regression equations
+
+With $X$ the independent variable, $M$ the mediator, and $Y$ the outcome, the prose procedure on p. 1177 can be written:
+
+$$
+M = i_1 + aX + e_1,
+$$
+
+$$
+Y = i_2 + tX + e_2,
+$$
+
+$$
+Y = i_3 + cX + bM + e_3.
+$$
+
+The $i$ terms are intercepts, and the $e$ terms are residuals. The article states the estimation order as mediator on independent variable, outcome on independent variable, and outcome on both independent variable and mediator. It calls for separate coefficients to be estimated and tested; hierarchical or stepwise regression and partial/semipartial correlations are not required.
+
+The first equation asks whether $X$ changes the proposed process. The second establishes the relationship to be explained. The third asks whether the process predicts the outcome beyond $X$, and whether including it reduces the original predictor coefficient.
+
+## Mediation conditions and their logic
+
+| Test | Observation required in the article framework | Why it matters |
+|---|---|---|
+| 1. $M$ on $X$ | $X$ significantly affects $M$: path $a$. | The mediator must respond to the independent variable. |
+| 2. $Y$ on $X$ | $X$ significantly affects $Y$ before controlling $M$. | There is an original relationship to explain. |
+| 3. $Y$ on $X$ and $M$ | $M$ significantly affects $Y$ controlling $X$: path $b$. | The proposed mechanism relates to the outcome beyond the predictor. |
+| Compare predictor coefficients | With effects in the predicted direction, the $X$ coefficient in equation 3 is smaller than in equation 2. | The process accounts for part or all of the original relationship. |
+
+These are the regression conditions on p. 1177. The conceptual discussion on p. 1176 describes a previously significant predictor–outcome relation becoming nonsignificant after controlling the paths, with strongest evidence when residual path $c$ is zero. The paper then explicitly describes a continuum in the amount of mediation.
+
+## Complete and partial mediation
+
+**Perfect or complete mediation:** the independent variable has no effect on the outcome with the mediator controlled. A zero residual path $c$ is the strongest case. Nonsignificance is not itself a numerical demonstration that the coefficient equals zero (pp. 1176–1177).
+
+**Partial mediation:** the mediator substantially reduces the predictor–outcome relation while a residual direct path remains. The authors discuss multiple mediating factors and the multiple causes of social phenomena, making reduction rather than total elimination a realistic possibility (p. 1176).
+
+Magnitude matters alongside significance. Since $X$ and a successful mediator correlate, multicollinearity reduces power in the third equation. A smaller coefficient can be nonsignificant while a larger one is significant; the significance labels alone cannot quantify the reduction (p. 1177).
+
+## Indirect effect and Sobel discussion
+
+The article also describes an approximate significance test for $ab$. If $s_a$ and $s_b$ are the standard errors of $a$ and $b$, its displayed standard error is:
+
+$$
+s_{ab}=\sqrt{b^2s_a^2+a^2s_b^2+s_a^2s_b^2}.
+$$
+
+It notes that Sobel omits the last product-of-variances term, ordinarily small. This discussion belongs to the 1986 paper and is not a bootstrap procedure (p. 1177).
+
+## Article examples
+
+**Incentive → dissonance → attitude change:** a dissonance-reduction sequence can account for the incentive effect following discrepant action (p. 1176).
+
+**Attitudes/normative factors → intention → behavior:** intention is an intervening variable in the discussion of Fishbein and Ajzen. In contrast, gender may modify the intention–behavior relation. Testing gender × intention addresses this moderator claim; merely adding or dropping a variable from a prediction equation does not (p. 1180).
+
+**Density → perceived control → outcome:** a mediator account needs an independent measure of perceived control. Manipulating control and observing a density effect alone does not establish that mechanism. This illustrates why design and measurement must match the causal claim (pp. 1178–1180).
+
+# Moderator vs Mediator
+
+## Comparison
+
+| Feature | Moderator | Mediator |
+|---|---|---|
+| Main question | Under what conditions does an effect differ? | Through what process does the effect occur? |
+| Conceptual role | Defines conditions or boundaries of a relationship. | Accounts for the relationship through an intervening process. |
+| Position in causal logic | Antecedent alongside the predictor. | Consequence of the predictor and antecedent of the outcome. |
+| Statistical evidence | Interaction or tested difference in predictor effects. | Linked regression conditions and reduced direct predictor coefficient. |
+| Interaction required? | Interaction expresses the moderator hypothesis; form depends on theory. | No interaction required in the basic three-variable model. |
+| Typical interpretation | The effect of $X$ differs across $Z$. | $X$ affects $M$, which helps account for its effect on $Y$. |
+| Strategic starting point | Often an inconsistent or weak relationship. | An established stronger relationship needing explanation. |
+
+The last row reflects strategic guidance, not a definition determined by one sample correlation (pp. 1174–1178).
+
+## Original concept schematics
+
+These are my simplified schematics based on Figures 1 and 3, not reproduced article artwork.
+
+```{dot}
+digraph moderation {
+graph [rankdir=TB, bgcolor="transparent"];
+node [shape=box, style=rounded, fontname="Helvetica"];
+X [label="X: Predictor"];
+Z [label="Z: Moderator"];
+XZ [label="X x Z: Interaction"];
+Y [label="Y: Outcome"];
+X -> Y [label="b1"];
+Z -> Y [label="b2"];
+X -> XZ [style=dashed, label="product"];
+Z -> XZ [style=dashed];
+XZ -> Y [label="b3: moderation test"];
+}
+```
+
+Dashed links indicate construction of the product, not additional causal paths. The product → outcome path tests whether the predictor effect changes across moderator values.
+
+```{dot}
+digraph mediation {
+graph [rankdir=LR, bgcolor="transparent"];
+node [shape=box, style=rounded, fontname="Helvetica"];
+X [label="X: Independent variable"];
+M [label="M: Mediator"];
+Y [label="Y: Outcome"];
+X -> M [label="a"];
+M -> Y [label="b"];
+X -> Y [label="c: controlled direct path"];
+}
+```
+
+The mediated route is $X \rightarrow M \rightarrow Y$; $c$ is the remaining direct route in Figure 3 notation.
+
+## All four article figures
+
+| Figure | Message |
+|---|---|
+| 1, p. 1174 | Predictor, moderator, and product feed the outcome; the product path tests moderation. |
+| 2, p. 1175 | Predictor effects may change linearly, quadratically, or through a step across the moderator. |
+| 3, p. 1176 | A mediation chain has paths $a$ and $b$ alongside direct path $c$. |
+| 4, p. 1179 | Manipulated control, stressor, and their product can influence perceived control and outcome, permitting a combined analysis. |
+
+## Combining the roles
+
+Figure 4 uses $C$ for manipulated control, $S$ for stressor, $CS$ for their product, $P$ for perceived control, and $O$ for outcome. The analysis first assesses effects of $C$, $S$, and $CS$ on $O$; next examines $P$ and its role in those effects; and finally introduces $PS$ to investigate the moderation mechanism (p. 1179).
+
+The authors call a pattern **mediated moderation** when perceived control accounts for the interaction effect on outcome. They also discuss **moderated mediation**, where mediation varies across levels of another variable. Both terms occur in this paper. A moderator finding may motivate a search for a mechanism; a mediator finding may suggest an intervention altering conditions of an effect (pp. 1178–1179).
+
+# Important Cautions and Assumptions
+
+| Issue | Article qualification | Research implication |
+|---|---|---|
+| Causal ordering | Regression mediation assumes the outcome does not cause the mediator; feedback creates bias. | Justify temporal and causal ordering rather than infer it from associations alone. |
+| Mediator measurement error | Can attenuate the mediator coefficient and inflate the controlled independent-variable effect. | A real mediator can be overlooked when measured unreliably. |
+| Multicollinearity | A successful mediator correlates with $X$, reducing coefficient-test power. | Consider coefficient size as well as significance. |
+| Moderator measurement | Error in product variables can produce low interaction-test power; differential predictor reliability biases group slopes. | Reliable, comparable measurement matters. |
+| Correlations vs slopes | Correlations depend on variances and measurement error. | Test unstandardized effect differences. |
+| Construct validity | A mediator requires independent and converging operationalizations. | A manipulation check is not automatically evidence of a mechanism. |
+| Statistical method | ANOVA alone provides a limited mediation test. | A factorial effect does not establish an intervening process. |
+
+These cautions appear on pp. 1175–1179. The original paper also discusses multiple-indicator latent-variable modeling, LISREL/EQS, and two-stage least squares in relation to measurement error and feedback. These belong to its historical scope; no modern SEM workflow is being substituted here.
+
+# Implications for Research Design
+
+Decide the third variable role before selecting a test. Moderator research needs variation in the proposed conditions and a direct test of different effects. Mediator research needs an independent operationalization of the process and a defensible causal order. In the control example, independently manipulating control may test moderation, but claiming a perceived-control mechanism requires measuring perceived control (pp. 1174–1179).
+
+Mediation therefore raises demands on data quality and quantity. The authors discuss multiple measures and multiple-indicator models to address measurement problems. They also favor moderators that illuminate possible mechanisms over a proliferation of variables that merely improve prediction. Conversely, understanding a mechanism may suggest environmental interventions, such as changing controllability in crowded settings (pp. 1177–1179).
+
+# Application to Marketing / MSDM
+
+## Original CEP moderation illustration
+
+**Conceptual illustration only; no CEP finding is claimed.** Let $X$ be website evaluation, $Y$ consultation intention, and $Z$ a two-group respondent-location indicator. Moderation asks whether the website-evaluation–intention slope differs by location. The $XZ$ coefficient tests that difference. A location main effect alone does not demonstrate moderation.
+
+The design would require sufficient variation and observations within groups and comparable measurement. Location would specify a condition, not explain the psychological mechanism.
+
+## Original CEP mediation illustration
+
+**Conceptual illustration only; no CEP finding is claimed.** A proposed process is website information quality ($X$) → perceived trust ($M$) → consultation intention ($Y$). Following the article, test quality → trust, quality → intention, trust → intention controlling quality, and the reduction in the quality coefficient after trust enters.
+
+A stronger design would manipulate information quality, measure trust independently, and establish temporal ordering before assessing intention. A single cross-sectional association would leave the causal-ordering issue unresolved. This is a proposed study, not evidence that current PhD Orthodontics data demonstrate mediation.
+
+# Quick Reference and Important Lessons
+
+| Question | Moderator | Mediator |
+|---|---|---|
+| What does it answer? | When or under which conditions? | How or why? |
+| Key model term | Predictor × moderator for linear interaction. | Paths $a$ and $b$, with controlled direct path $c$. |
+| Key evidence | Tested difference in predictor effects. | Linked significant effects and reduced predictor coefficient. |
+| Interpretation | Conditional relationship. | Intervening process under the model assumptions. |
+| Common mistake | Treating a main effect or differing correlations as sufficient. | Treating any correlated predictor or manipulation check as the mechanism. |
+
+Keep theory, research operations, and analysis aligned. An interaction is not an indirect pathway. A mediator must account for a process rather than merely add predictive information. Measurement error, feedback, and limited power constrain what the statistical pattern can establish (pp. 1173–1181).
+
+Remember the regression sequence together with its qualifications about residual direct effects and the discussion of Sobel. No supplemental contemporary-methods section has been added; the main purpose is an accurate study note on the assigned 1986 paper.
+
+# References
+
+Baron, R. M., & Kenny, D. A. (1986). The moderator–mediator variable distinction in social psychological research: Conceptual, strategic, and statistical considerations. *Journal of Personality and Social Psychology, 51*(6), 1173–1182. <https://doi.org/10.1037/0022-3514.51.6.1173>
+
+# Appendix
+
+## Project Links
+
+- [GitHub Repository](https://github.com/hanamai111/m11-mediator-moderator)
+- [GitHub Pages Website](https://hanamai111.github.io/m11-mediator-moderator/)
+
+## Assigned Article
+
+- [Article DOI](https://doi.org/10.1037/0022-3514.51.6.1173)
+- [Full article accessed through the Society of Experimental Social Psychology](https://www.sesp.org/files/The%20Moderator-Baron.pdf)
+
+The full article, pp. 1173–1182, including all figures, conclusion, and references, was reviewed. The PDF is linked for reading and is not included in the public repository.
+
